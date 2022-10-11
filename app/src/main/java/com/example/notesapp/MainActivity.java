@@ -5,12 +5,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
-import com.example.notesapp.models.DaoSession;
 import com.example.notesapp.models.Note;
-import com.example.notesapp.models.NoteDao;
-import com.example.notesapp.models.NotesAdapter;
 import com.example.notesapp.repository.NotesRepository;
 import com.example.notesapp.repository.RepositoryProvider;
 

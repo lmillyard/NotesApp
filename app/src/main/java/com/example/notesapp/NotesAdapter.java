@@ -1,4 +1,4 @@
-package com.example.notesapp.models;
+package com.example.notesapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.notesapp.AddNoteActivity;
-import com.example.notesapp.R;
+import com.example.notesapp.models.Note;
 import com.example.notesapp.repository.Tags;
 
 import java.util.List;
@@ -39,6 +38,11 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
         holder.titleTextView.setText(note.getTitle());
         holder.descriptionTextView.setText(note.getDescription());
         holder.containerLayout.setOnClickListener(view -> openNoteDetails(note.getId()));
+        if (note.getArchived()) {
+            holder.archiveImageView.setVisibility(View.VISIBLE);
+        } else {
+            holder.archiveImageView.setVisibility(View.GONE);
+        }
 
     }
 
@@ -56,12 +60,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
     static class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView titleTextView, descriptionTextView;
         View containerLayout;
+        View archiveImageView;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.titleTextView);
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
             containerLayout = itemView.findViewById(R.id.containerLayout);
+            archiveImageView = itemView.findViewById(R.id.archiveImageView);
 
         }
     }

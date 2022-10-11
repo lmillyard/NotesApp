@@ -8,25 +8,50 @@
     tools:context=".AddNoteActivity">
 
     <EditText
-        android:id="@+id/titleEditText"
+        android:id="@+id/usernameEditText"
         app:layout_constraintTop_toTopOf="parent"
         android:hint="Note title:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/descriptionEditText"
-        app:layout_constraintTop_toBottomOf="@id/titleEditText"
+        android:id="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText"
         android:hint="Note description:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalScreenMiddle"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/saveButton"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/signUpButton"
+        app:layout_constraintLeft_toRightOf="@id/verticalScreenMiddle"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+        app:layout_constraintTop_toBottomOf="@id/archiveCheckBox"
+        android:layout_marginLeft="8dp"
         android:text="Save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:text="Delete"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/verticalScreenMiddle"
+        app:layout_constraintTop_toTopOf="@id/signUpButton"
+        android:layout_marginRight="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/archiveCheckBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        android:text="Archive?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>
