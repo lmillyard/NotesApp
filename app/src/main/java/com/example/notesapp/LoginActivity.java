@@ -57,12 +57,17 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
 
         usernameTextInputLayout = findViewById(R.id.usernameTextInputLayout);
         passwordTextInputLayout = findViewById(R.id.passwordTextInputLayout);
+        if(BuildConfig.DEBUG) {
+            usernameEditText.setText("Loz");
+            passwordEditText.setText("123");
+        }
 
     }
 
     @Override
     public void onSuccess() {
-        Toast.makeText(this, "Yay", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

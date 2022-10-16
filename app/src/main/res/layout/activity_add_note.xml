@@ -31,7 +31,8 @@
         android:id="@+id/signUpButton"
         app:layout_constraintLeft_toRightOf="@id/verticalScreenMiddle"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/archiveCheckBox"
+        app:layout_constraintTop_toBottomOf="@id/noteColourRecyclerView"
+        android:layout_marginTop="24dp"
         android:layout_marginLeft="8dp"
         android:text="Save"
         android:layout_width="0dp"
@@ -52,6 +53,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordEditText"
         android:text="Archive?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteColourRecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/archiveCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>
