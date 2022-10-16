@@ -57,6 +57,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpCallback 
 
     @Override
     public void onSuccess() {
+        Toast.makeText(this, "User added!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }

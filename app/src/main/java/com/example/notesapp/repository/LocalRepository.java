@@ -45,10 +45,12 @@ public class LocalRepository implements NotesRepository {
         if (noteColours == null || noteColours.isEmpty()) {
                NoteColour noteColour1 = new NoteColour();
                noteColour1.setColourCode("#FF00BCD4");
-            NoteColour noteColour2 = new NoteColour();
-            noteColour2.setColourCode("#FFFFC107");
-            NoteColour noteColour3 = new NoteColour();
-            noteColour3.setColourCode("#FF9C27B0");
+
+               NoteColour noteColour2 = new NoteColour();
+               noteColour2.setColourCode("#FFFFC107");
+
+               NoteColour noteColour3 = new NoteColour();
+               noteColour3.setColourCode("#FF9C27B0");
 
             noteColourDao.insert(noteColour1);
             noteColourDao.insert(noteColour2);
@@ -108,6 +110,7 @@ public class LocalRepository implements NotesRepository {
             Author author = new Author();
             author.setName(username);
             author.setPassword(password);
+            authorDao.insert(author);
             signUpCallback.onSuccess();
         } else {
             signUpCallback.onFailure("Username already in use");
