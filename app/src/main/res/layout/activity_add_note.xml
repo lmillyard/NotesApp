@@ -21,31 +21,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/verticalScreenMiddle"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/saveButton"
         app:layout_constraintLeft_toRightOf="@id/verticalScreenMiddle"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/noteColourRecyclerView"
         android:layout_marginTop="24dp"
         android:layout_marginLeft="8dp"
         android:text="Save"
+        app:layout_constraintHorizontal_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/deleteButton"
-        android:text="Delete"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/verticalScreenMiddle"
-        app:layout_constraintTop_toTopOf="@id/signUpButton"
+        app:layout_constraintTop_toTopOf="@id/saveButton"
         android:layout_marginRight="8dp"
+        android:text="Delete"
         android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalScreenMiddle"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <CheckBox
@@ -60,6 +63,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/noteColourRecyclerView"
         app:layout_constraintTop_toBottomOf="@id/archiveCheckBox"
-        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>

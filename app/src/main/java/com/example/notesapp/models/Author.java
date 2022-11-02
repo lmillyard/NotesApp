@@ -22,6 +22,7 @@ public class Author {
     @ToMany(referencedJoinProperty = "authorId")    
     private List<Note> notes;
 
+
     /** Used to resolve relations */
     @Generated(hash = 2040040024)
     private transient DaoSession daoSession;

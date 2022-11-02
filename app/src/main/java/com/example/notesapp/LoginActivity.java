@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
 
         findViewById(R.id.signInButton).setOnClickListener(v ->
                 trySignIn(usernameEditText.getText().toString(), passwordEditText.getText().toString()));
-        findViewById(R.id.signUpButton).setOnClickListener(v ->
+        findViewById(R.id.saveButton).setOnClickListener(v ->
                 goToSignUp());
         setupUI();
     }

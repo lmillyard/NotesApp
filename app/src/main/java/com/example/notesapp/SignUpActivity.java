@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.notesapp.callbacks.SignUpCallback;
-import com.example.notesapp.models.Author;
 import com.example.notesapp.repository.NotesRepository;
 import com.example.notesapp.repository.RepositoryProvider;
 import com.google.android.material.textfield.TextInputLayout;
@@ -24,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        findViewById(R.id.signUpButton).setOnClickListener(v ->
+        findViewById(R.id.saveButton).setOnClickListener(v ->
                 trySignUp(usernameEditText.getText().toString(), passwordEditText.getText().toString()));
 
         setupUI();

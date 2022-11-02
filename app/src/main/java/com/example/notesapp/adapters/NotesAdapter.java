@@ -1,4 +1,4 @@
-package com.example.notesapp;
+package com.example.notesapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.notesapp.AddNoteActivity;
+import com.example.notesapp.R;
 import com.example.notesapp.models.Note;
 import com.example.notesapp.repository.Tags;
 

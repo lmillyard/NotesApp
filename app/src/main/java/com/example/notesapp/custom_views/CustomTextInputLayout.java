@@ -1,4 +1,4 @@
-package com.example.notesapp.custom_stuff;
+package com.example.notesapp.custom_views;
 
 import android.content.Context;
 import android.text.Editable;

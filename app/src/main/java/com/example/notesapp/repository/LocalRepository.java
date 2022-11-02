@@ -12,7 +12,6 @@ import com.example.notesapp.models.NoteColour;
 import com.example.notesapp.models.NoteColourDao;
 import com.example.notesapp.models.NoteDao;
 
-import org.greenrobot.greendao.query.WhereCondition;
 
 import java.util.List;
 
@@ -43,18 +42,19 @@ public class LocalRepository implements NotesRepository {
     private void seedColoursIfNeeded() {
         List<NoteColour> noteColours = getNoteColours();
         if (noteColours == null || noteColours.isEmpty()) {
-               NoteColour noteColour1 = new NoteColour();
-               noteColour1.setColourCode("#FF00BCD4");
+            NoteColour noteColour1 = new NoteColour();
+            noteColour1.setColourCode("red");
 
-               NoteColour noteColour2 = new NoteColour();
-               noteColour2.setColourCode("#FFFFC107");
+            NoteColour noteColour2 = new NoteColour();
+            noteColour2.setColourCode("blue");
 
-               NoteColour noteColour3 = new NoteColour();
-               noteColour3.setColourCode("#FF9C27B0");
+            NoteColour noteColour3 = new NoteColour();
+            noteColour3.setColourCode("green");
 
             noteColourDao.insert(noteColour1);
             noteColourDao.insert(noteColour2);
             noteColourDao.insert(noteColour3);
+
 
         }
     }
